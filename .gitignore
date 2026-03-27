@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#other directories and files
+.playwright-mcp
+e2e
+.claude
+test-results
+

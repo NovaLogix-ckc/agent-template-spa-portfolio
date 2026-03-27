@@ -4,6 +4,12 @@ A config-driven **React 19 + Vite 8** template for building polished, modern sta
 
 Whether you're launching a portfolio, a business landing page, or a showcase site, this template gives you a production-ready starting point with beautiful animations, theming, and SEO baked in. Just point your favourite AI coding agent at it and describe what you want.
 
+## Video Walkthrough
+
+[![Static Website Template Demo](https://img.youtube.com/vi/84fDwmO5AXU/maxresdefault.jpg)](https://youtu.be/84fDwmO5AXU)
+
+Watch a demo on YouTube.
+
 ---
 
 ## Agent-First Design
@@ -84,7 +90,7 @@ This template includes digital signatures (HTML meta tags, a footer link, CSS co
 ## Licence
 
 ```
-Copyright (c) 2025 Colin Kelly-Cook / Novalogix
+Copyright (c) 2026 Colin Kelly-Cook / Novalogix
 https://novalogix.au
 
 This template may be used freely to build websites and
