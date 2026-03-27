@@ -1,0 +1,71 @@
+.section {
+  padding: var(--section-py) var(--gutter);
+  position: relative;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: var(--color-bg-card);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: border-color var(--duration-normal), transform var(--duration-normal) var(--ease-out-expo);
+}
+
+.card:hover {
+  border-color: var(--color-primary-border);
+  transform: translateY(-2px);
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: var(--space-md);
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+
+.card:hover .number {
+  transform: scale(1.1);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.description {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}

@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Colin Kelly-Cook
+Contact: colin@novalogix.au
+Site: https://novalogix.au
+
+/* SITE */
+Template: Novalogix Static Template
+Standards: HTML5, CSS3, ES6+
+Framework: React + Vite

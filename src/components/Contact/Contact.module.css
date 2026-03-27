@@ -1,0 +1,67 @@
+.section {
+  padding: var(--section-py) var(--gutter);
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+}
+
+.email {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  position: relative;
+  margin-bottom: var(--space-2xl);
+}
+
+.email::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+
+.email:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.linkedinLink {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  padding: 0.85rem 2.5rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background-color var(--duration-fast);
+}
+
+.linkedinLink:hover {
+  background: var(--color-primary-hover);
+}

@@ -1,0 +1,228 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: var(--space-sm) var(--gutter);
+  transition: background-color var(--duration-fast), backdrop-filter var(--duration-fast);
+}
+
+.nav.scrolled {
+  background-color: var(--color-nav-scrolled);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.5rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  transition: color var(--duration-fast);
+}
+
+.logo:hover {
+  color: var(--color-primary);
+}
+
+.links {
+  display: none;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 1024px) {
+  .links {
+    display: flex;
+  }
+}
+
+.link {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast);
+  font-weight: 500;
+}
+
+.link:hover {
+  color: var(--color-text);
+}
+
+.cta {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--color-primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration-fast);
+}
+
+.cta:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 26px;
+  padding: 4px 0;
+}
+
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-text);
+  transition: transform var(--duration-normal) var(--ease-out-expo),
+    opacity var(--duration-fast);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--color-overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlayContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.overlayLink {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  transition: color var(--duration-fast);
+}
+
+.overlayLink:hover {
+  color: var(--color-primary);
+}
+
+.overlayCta {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: var(--space-sm);
+}
+
+/* Color cycler button */
+.colorCycler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--color-border-light);
+  cursor: pointer;
+  transition: border-color var(--duration-fast), transform var(--duration-fast);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.colorCycler:hover {
+  border-color: var(--color-text-secondary);
+  transform: scale(1.1);
+}
+
+.colorCycler:active {
+  transform: scale(0.95);
+}
+
+.colorSwatch {
+  display: block;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.overlayColorCycler {
+  margin-top: var(--space-md);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.overlayColorCycler .colorSwatch {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* Theme toggle button */
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--color-border-light);
+  cursor: pointer;
+  transition: border-color var(--duration-fast), transform var(--duration-fast), color var(--duration-fast);
+  padding: 0;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.themeToggle:hover {
+  border-color: var(--color-text-secondary);
+  transform: scale(1.1);
+  color: var(--color-text);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+.overlayThemeToggle {
+  margin-top: var(--space-md);
+  width: 2.5rem;
+  height: 2.5rem;
+}
